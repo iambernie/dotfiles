@@ -1,0 +1,123 @@
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
+URxvt.saveLines: 50000
+URxvt.background: black
+URxvt.foreground: white
+!URxvt.perl-ext-common: default,tabbed
+URxvt.font: xft:Terminus:pixelsize=13:antialias=true
+URxvt.cursorBlink: true
+!URxvt.tabbed.tabbar-fg: white
+!URxvt.tabbed.tabbar-bg: 4
+!URxvt.tabbed.tab-fg: 15
+!URxvt.tabbed.tab-bg: 8
+
+URxvt.transparent: true
+URxvt.shading: 55 
+
+!black
+*color0: #000000
+*color8: #333333
+!red
+*color1: #ff5353
+*color9: #e76c6c
+!green
+*color2: #09c600
+*color10: #6cc667
+!brown/yellow
+*color3: #ffc000
+*color11: #ffdb6f
+!blue
+*color4: #29acff
+*color12: #87d0ff
+!magenta
+*color5: #ff71f0
+*color13: #fe84ff
+!cyan
+*color6: #00c7c9
+*color14: #46f9fb
+!white
+!*color7: #636363
+*color7: #ffffff
+*color15: #b5b0ad
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+!URxvt*color0: #1793D1
+!URxvt*color1: #333333
+!URxvt*color2: #FFFFFF
+
+!urxvt*color0:    #6c6c6c
+!urxvt*color1:    #e9897c
+!urxvt*color2:    #b6e77d
+
+!urxvt*color3:    #ecebbe
+!urxvt*color4:    #a9cdeb
+!urxvt*color5:    #ea96eb
+!urxvt*color6:    #c9caec
+!urxvt*color7:    #f2f2f2 
+
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+!urxvt*color8:    #747474
+!urxvt*color9:    #f99286
+!urxvt*color10:    #c3f786
+!urxvt*color11:    #fcfbcc
+!urxvt*color12:    #b6defb
+!urxvt*color13:    #fba1fb
+!urxvt*color14:    #d7d9fc
+!urxvt*color15:    #e2e2e2
+
+! Molokai theme
+!*xterm*background: #101010
+!*xterm*foreground: #d0d0d0
+!*xterm*cursorColor: #d0d0d0
+!*xterm*color0: #101010
+!*xterm*color1: #960050
+!*xterm*color2: #66aa11
+!*xterm*color3: #c47f2c
+!*xterm*color4: #30309b
+!*xterm*color5: #7e40a5
+!*xterm*color6: #3579a8
+!*xterm*color7: #9999aa
+!*xterm*color8: #303030
+!*xterm*color9: #ff0090
+!*xterm*color10: #80ff00
+!*xterm*color11: #ffba68
+!*xterm*color12: #5f5fee
+!*xterm*color13: #bb88dd
+!*xterm*color14: #4eb4fa
+!*xterm*color15: #d0d0d0
+
+*xterm*background: #000000
+*xterm*foreground: #807855
+*xterm*color0: #262729
+*xterm*color8: #555544
+*xterm*color1: #ce5c00
+*xterm*color9: #f57900
+*xterm*color2: #668800
+*xterm*color10: #88aa22
+*xterm*color3: #B88B10
+*xterm*color11: #FFC135
+*xterm*color4: #5485a4
+*xterm*color12: #85A8C0
+*xterm*color5: #85608b
+*xterm*color13: #ad7fa8
+*xterm*color6: #807855
+*xterm*color14: #99916A
+*xterm*color7: #767779
+*xterm*color15: #b6b8b9
