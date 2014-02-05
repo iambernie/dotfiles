@@ -1,3 +1,9 @@
 [submodule ".vim/bundles/jedi-vim"]
 	path = .vim/bundles/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule ".vim/bundles/rainbow_parentheses"]
+	path = .vim/bundles/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule ".vim/bundles/supertab"]
+	path = .vim/bundles/supertab
+	url = https://github.com/ervandew/supertab.git
