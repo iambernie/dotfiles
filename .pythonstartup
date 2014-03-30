@@ -3,48 +3,51 @@
 try:
     import os
     import sys
-    print("imported os")
-    print("imported sys")
+    print("import os")
+    print("import sys")
 except ImportError: pass
     
 
 try:
     import numpy as np
     np.set_printoptions(threshold=np.nan, linewidth=120)
-    print("imported numpy as np")
+    print("import numpy as np")
 except ImportError: pass
 
 
 try:
     import matplotlib as mpl
     import matplotlib.pyplot as plt
-    print("imported matplotlib as mpl")
-    print("imported matplotlib.pyplot as plt")
+    print("import matplotlib as mpl")
+    print("import matplotlib.pyplot as plt")
 except ImportError: pass
 
 
 try:
     import h5py
-    print("imported h5py")
+    print("import h5py")
 except ImportError: pass
 
 try:
     import sympy
-    import sympy.symbols as symbols
-    print("imported sympy")
-    print("imported sympy.symbols as symbols")
+    from sympy import symbols
+    print("import sympy")
+    print("from sympy import symbols")
 except ImportError: pass
 
 try:
     from amuse.units import units
     from amuse.datamodel.particles import Particles
-    print("imported amuse.units.units as units")
-    print("imported amuse.datamodel.particles.Particles as Particles")
+    print("from amuse.units import units")
+    print("from amuse.datamodel.particles import Particles")
 except ImportError: pass
 
 try:
     from jedi.utils import setup_readline
     setup_readline()
+    from jedi import settings
+    settings.case_insensitive_completion = False
+    print("loaded jedi")
 except ImportError:
     # Fallback to the stdlib readline completer if it is installed.
     # Taken from http://docs.python.org/2/library/rlcompleter.html
@@ -59,6 +62,6 @@ except ImportError:
 
 try:
     from pprint import pprint as pp
-    print("imported pprint from pprint as pp")
+    print("from pprint import pprint as pp")
 except ImportError: pass
 
