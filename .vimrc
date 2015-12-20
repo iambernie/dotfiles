@@ -40,6 +40,8 @@ let g:rbpt_colorpairs = [
     \ ['red',         'red'],
     \ ]
 
+let g:netrw_dirhistmax = 0
+
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
