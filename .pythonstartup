@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+try:
+    import importlib
+    print("import importlib")
+except ImportError: pass
 
 try:
     import os
@@ -6,12 +10,12 @@ try:
     print("import os")
     print("import sys")
 except ImportError: pass
-    
+
 
 try:
-    import numpy as np
-    np.set_printoptions(threshold=np.nan, linewidth=120)
-    print("import numpy as np")
+    import numpy
+    numpy.set_printoptions(threshold=numpy.nan, linewidth=100)
+    print("import numpy")
 except ImportError: pass
 
 
@@ -45,8 +49,8 @@ except ImportError: pass
 try:
     from jedi.utils import setup_readline
     setup_readline()
-    from jedi import settings
-    settings.case_insensitive_completion = False
+    from jedi import settings as jedisettings
+    jedisettings.case_insensitive_completion = False
     print("loaded jedi")
 except ImportError:
     # Fallback to the stdlib readline completer if it is installed.
@@ -61,7 +65,18 @@ except ImportError:
 
 
 try:
-    from pprint import pprint as pp
-    print("from pprint import pprint as pp")
+    from pprint import pprint
+    print("from pprint import pprint")
 except ImportError: pass
 
+
+try:
+    import hdf5handler
+    print("import hdf5handler")
+except ImportError: pass
+
+
+try:
+    pprint(globals())
+except:
+    pass
