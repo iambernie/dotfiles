@@ -1,0 +1,39 @@
+# Variables
+
+#set horizontal-scroll = 33%
+set line-graphics = yes
+#set show-id = yes
+#set show-author = yes
+#set show-date = yes
+#set show-refs = yes
+#set show-rev-graph = yes
+
+# Colors
+color cursor green black
+color status white black
+color title-focus green black
+color date yellow default
+color author blue default
+#color main-head magenta default
+#color main-tag magenta default
+#color stat-staged green default
+#color stat-unstaged red bold
+#color stat-untracked yellow default
+#color tree-head white default
+#color tree-dir cyan default
+
+# Generic
+
+#bind generic b view-branch
+#bind generic s view-status
+#bind generic F !git fetch
+#bind generic y !@sh -c "echo -n %(commit) | xsel -ib"
+#bind generic Y !@sh -c "echo -n %(commit) | xsel -ib"
+
+
+# Main
+
+#bind main F6 !@git fetch
+#bind main F7 !@git rebase
+#bind main F8 !@git pull
+#bind main F9 !@git push
