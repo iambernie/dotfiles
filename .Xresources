@@ -18,7 +18,11 @@ URxvt.internalBorder:  5
 !URxvt.tabbed.tab-fg: 15
 !URxvt.tabbed.tab-bg: 8
 
-
+xterm*geometry: 115x29
+xterm*background: black
+xterm*foreground: white
+xterm*faceName: Inconsolata:pixelsize=15:antialias=True
+xterm*saveLines:       50000
 
 ! xscreensaver ---------------------------------------------------------------
 !font settings
@@ -78,7 +82,7 @@ xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
 !white
 *color7: #ffffff
 *color15: #b5b0ad
-!
+
 ! Normal
 ! color0    black
 ! color1    red
