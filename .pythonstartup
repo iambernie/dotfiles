@@ -80,3 +80,8 @@ try:
     pprint(globals())
 except:
     pass
+
+def resetwidth():
+    rows, columns = os.popen('stty size', 'r').read().split()
+    numpy.set_printoptions(threshold=numpy.nan, linewidth=int(columns))
+
