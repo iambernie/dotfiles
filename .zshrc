@@ -1,16 +1,16 @@
-#  zsh config script 
+#  zsh config script
 
 autoload -U compinit && compinit
 
 # set this (autoload -U colors && colors) before PROMPT declaration.
-# it enables variables such as 
+# it enables variables such as
 # $fg[red], $fg[white], etc..
-autoload -U colors && colors 
+autoload -U colors && colors
 
 #============================  To set a prompt theme  ========================#
 #autoload -U promptinit
 #promptinit
-#Set theme "prompt theme_name" 
+#Set theme "prompt theme_name"
 #prompt bart
 
 
@@ -56,9 +56,9 @@ setopt completealiases
 # sg = (SETGID)                  file that is setuid (g+s)
 # ca = (CAPABILITY)              file with capability
 # tw = (STICKY_OTHER_WRITABLE)   dir that is sticky with (+t, o+w)
-# ow = (OTHER_WRITABLE)          dir that is (o+w) but no sticky 
+# ow = (OTHER_WRITABLE)          dir that is (o+w) but no sticky
 # st = (STICKY)                  dir with the sticky bit set (+t)
-# ex = (EXEC)                    executable 
+# ex = (EXEC)                    executable
 
 export LS_COLORS="no=00:fi=00:rs=0:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:\
 bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=01;34:\
@@ -118,6 +118,7 @@ export MPD_HOST=/home/bernie/.mpd/socket
 export GTK_IM_MODULE="ibus"
 export XMODIFIERS="@im=ibus"
 export QT_IM_MODULE="ibus"
+export EDITOR=vim
 
 function say { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$1"; }
 function saynl { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=nl&q=$1"; }
