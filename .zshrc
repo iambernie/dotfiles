@@ -80,8 +80,8 @@ alias rm='rm -i'
 alias cd..='cd ..'
 alias ..='cd ..'
 #alias less='less -R'
-alias grep='grep --color=always'
-alias tree='tree -C'
+#alias grep='grep --color=always'
+#alias tree='tree -C'
 
 alias ls='ls --color=always'
 alias lr='ls -R'                    # recursive ls
@@ -131,7 +131,7 @@ bindkey "^[[1;5C" forward-word
 bindkey "\e[3~" delete-char # Del
 
 #======================  Aliases - Virtual Environments  ======================#
-alias p2='source $HOME/pyenvs/p2/bin/./activate'
+source $HOME/.pyenvs
 
 #==========================  Coloured Manuals  ================================#
 man() {

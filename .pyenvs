@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+# List of aliases to activate virtual python environments
+alias p2='source $HOME/pyenvs/p2/bin/./activate'
