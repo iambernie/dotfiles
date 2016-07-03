@@ -64,7 +64,7 @@ ow=34;40:st=37;40:ex=01;32:\
 *.avi=00;35:*.flv=00;35:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mp3=00;36:\
 *.ogg=00;36:*.wav=00;36:*.py=01;32:*.gpg=01;36:"
 
-export MPD_HOST=/home/bernie/.mpd/socket
+export MPD_HOST="$HOME/.mpd/socket"
 export GTK_IM_MODULE="ibus"
 export XMODIFIERS="@im=ibus"
 export QT_IM_MODULE="ibus"
