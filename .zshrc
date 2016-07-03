@@ -7,14 +7,15 @@ autoload -U compinit && compinit
 # $fg[red], $fg[white], etc..
 autoload -U colors && colors
 
+setopt completealiases
+
 #============================  To set a prompt theme  ========================#
 #autoload -U promptinit
 #promptinit
 #Set theme "prompt theme_name"
 #prompt bart
 
-
-#=============================  Stuff for git  ===============================#
+#=============================  git aware prompt  ===============================#
 parse_git_branch () {
     git branch 2> /dev/null | grep "*" | sed -e 's/* \(.*\)/ (\1)/g'
 }
@@ -22,14 +23,6 @@ parse_git_branch () {
 function precmd() {
     export PS1="%{$fg[red]%}%n @ %m%{$reset_color%}: %{$fg[green]%}%~%{$fg[yellow]%}$(parse_git_branch)%{$reset_color%}%# "
 }
-
-#=================== System dependent setup stuff ============================#
-#foreach f (~/.zshrc.d/*); do
-#        . "$f"
-#done
-
-
-setopt completealiases
 
 #============================   LS_COLORS   ===================================#
 #
@@ -69,14 +62,18 @@ ow=34;40:st=37;40:ex=01;32:\
 *.mov=00;35:*.mpg=00;35:*.mpeg=00;35:*.mkv=00;35:*.ogm=00;35:*.mp4=00;35:\
 *.m4v=00;35:*.wmv=00;35:*.asf=00;35:*.rm=00;35:*.rmvb=00;35:*.flc=00;35:\
 *.avi=00;35:*.flv=00;35:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mp3=00;36:\
-*.ogg=00;36:*.wav=00;36:*.py=01;32:"
+*.ogg=00;36:*.wav=00;36:*.py=01;32:*.gpg=01;36:"
 
+export MPD_HOST=/home/bernie/.mpd/socket
+export GTK_IM_MODULE="ibus"
+export XMODIFIERS="@im=ibus"
+export QT_IM_MODULE="ibus"
+export EDITOR=vim
 
 #Colored tab-completion list
 zstyle ':completion:*' list-colors "$LS_COLORS"
 
-
-#################################  ALIASES  ####################################
+#================================  Aliases  ===================================#
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
@@ -86,7 +83,6 @@ alias ..='cd ..'
 alias grep='grep --color=always'
 alias tree='tree -C'
 
-# ls
 alias ls='ls --color=always'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -lh'
@@ -94,37 +90,17 @@ alias la='ll -A'
 alias lx='ll -BX'                   # sort by extension
 alias lz='ll -rS'                   # sort by size
 alias lt='ll -rt'                   # sort by date
-alias lls='ls -lh | slow'
-
-# modified commands
-alias slow='slowdown'
-alias ctl='systemctl'
 
 alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 
-alias mpd='mpd ~/.mpd/conf'
 alias scanit='scanimage -p -v  --mode col --swcrop=yes --resolution 300 >' #Usage: 'scan outputfilename.ext'
-alias screenshot='import -window root -quality 90 -pause 2' #Usage: 'screenshot outputfilename.ext'
-alias svim='sudo vim'
-alias volume='alsamixer'
-alias backup='sudo /home/bernie/./backup.sh'
-alias traffic='speedometer.py -i 1.0 -l -m 1000000 -n 1 -r eth0 -t eth0'
+alias lockscreen='xscreensaver-command --lock'
 
 alias sa='echo "$SSH_AUTH_SOCK"'
 alias startx='ssh-agent startx'
 
-export MPD_HOST=/home/bernie/.mpd/socket
-export GTK_IM_MODULE="ibus"
-export XMODIFIERS="@im=ibus"
-export QT_IM_MODULE="ibus"
-export EDITOR=vim
-
-function say { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=en&q=$1"; }
-function saynl { mplayer -really-quiet "http://translate.google.com/translate_tts?tl=nl&q=$1"; }
-
-
-######################
+#==============================  Key Bindings =================================#
 bindkey "\e[1~" beginning-of-line # Home
 bindkey "\e[4~" end-of-line # End
 bindkey "\e[5~" beginning-of-history # PageUp
@@ -153,36 +129,24 @@ bindkey "\eOH" beginning-of-line
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 bindkey "\e[3~" delete-char # Del
-###################################
 
+#======================  Aliases - Virtual Environments  ======================#
+alias p2='source $HOME/pyenvs/p2/bin/./activate'
 
-alias actdj='source /home/bernie/pyenvs/django/bin/./activate'
-alias actamuse='source /home/bernie/pyenvs/amuse/bin/./activate'
-alias actpython2='source /home/bernie/pyenvs/p2/bin/./activate'
-alias actpython3='source /home/bernie/pyenvs/p3/bin/./activate'
-alias actenv1='source /home/bernie/pyenvs/env1/bin/./activate'
-
-#source ~/.zshenv
-
-# -- coloured manuals
+#==========================  Coloured Manuals  ================================#
 man() {
   env \
   LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-  LESS_TERMCAP_md=$(printf "\e[1;31m") \
+  LESS_TERMCAP_md=$(printf "\e[1;34m") \
   LESS_TERMCAP_me=$(printf "\e[0m") \
   LESS_TERMCAP_se=$(printf "\e[0m") \
   LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
   LESS_TERMCAP_ue=$(printf "\e[0m") \
-  LESS_TERMCAP_us=$(printf "\e[1;32m") \
+  LESS_TERMCAP_us=$(printf "\e[1;31m") \
   man "$@"
 }
 
+#========================== Misc. functions ===================================#
+
 function reload { source $HOME/.zshrc; echo 'Loaded: ~/.zshrc ' }
-
-
-
-
-
-
-
 
