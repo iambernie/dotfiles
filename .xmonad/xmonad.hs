@@ -61,7 +61,7 @@ myManageHook = composeAll [ (role =? "gimp-toolbox" <||> role =? "gimp-image-win
 myLayoutHook = smartSpacing 5 $ avoidStruts  $ layoutHook defaultConfig
 
 myKeys = [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
-         , ((mod4Mask .|. shiftMask, xK_r), spawn "urxvt -e ranger")
+         , ((mod4Mask .|. shiftMask, xK_o), spawn "urxvt -e ranger")
          , ((mod4Mask .|. shiftMask, xK_f), spawn "firefox")
          , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
          , ((0, xK_Print), spawn "scrot")
