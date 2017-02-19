@@ -1,3 +1,19 @@
-xset r rate 200 75&
-xset -dpms
+xbindkeys
+###################### xset instellingen ###############################
+xset r rate 200 75 & #200delay 75 repeat speed
+xset -dpms #disable power saving feature, like screensaver
 xset s off
+xset +fp /usr/share/fonts/local
+xset fp rehash
+xrdb ~/.Xresources
+#/usr/bin/xscreensaver -no-splash &
+
+##################### set background with feh ##########################
+feh --bg-tile /home/bernie/gray_tiles.png
+
+#ibus-daemon --xim -d
+
+xsetroot -cursor_name left_ptr
+setxkbmap -layout us
+
+[ ! -s ~/.config/mpd/pid ] && mpd
