@@ -31,7 +31,7 @@ import XMonad.Hooks.DynamicLog
        , xmobarColor
        , shorten
        )
-import XMonad.Hooks.ManageDocks ( avoidStruts, manageDocks)
+import XMonad.Hooks.ManageDocks ( avoidStruts, docks, manageDocks)
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Layout.Spacing (smartSpacing)
@@ -91,7 +91,7 @@ xmobarBottom = bin_xmobar ++ " " ++ rc_xmobarBottom
 main :: IO ()
 main = do
     xmproc <- spawnPipe xmobarTop
-    xmonad $ defaultConfig
+    xmonad $ docks defaultConfig
         { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
         , layoutHook = myLayoutHook
         , logHook = myLogHook xmproc
