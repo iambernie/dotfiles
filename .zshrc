@@ -79,9 +79,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias cd..='cd ..'
 alias ..='cd ..'
-#alias less='less -R'
-#alias grep='grep --color=always'
-#alias tree='tree -C'
+alias cless='less -R'
+alias cgrep='grep --color=always -n'
+alias ctree='tree -C'
 
 alias d='dirs -v | head -10'
 alias 1='cd -'
@@ -110,6 +110,8 @@ alias lockscreen='xscreensaver-command --lock'
 
 alias sa='echo "$SSH_AUTH_SOCK"'
 alias startx='ssh-agent startx'
+
+alias shoogle='hoogle search --count=20'
 
 #==============================  Key Bindings =================================#
 bindkey "\e[1~" beginning-of-line # Home
