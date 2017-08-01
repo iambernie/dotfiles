@@ -144,7 +144,10 @@ bindkey "^[[1;5C" forward-word
 bindkey "\e[3~" delete-char # Del
 
 #======================  Aliases - Virtual Environments  ======================#
-source $HOME/.pyenvs
+if [ -f $HOME/.pyenvs ]
+  then
+    source $HOME/.pyenvs
+fi
 
 #==========================  Coloured Manuals  ================================#
 man() {
