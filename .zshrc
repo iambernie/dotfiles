@@ -166,3 +166,6 @@ man() {
 
 function reload { source $HOME/.zshrc; echo 'Loaded: ~/.zshrc ' }
 
+if [ -x "$(command -v direnv)" ]; then
+  eval "$(direnv hook zsh)"
+fi
