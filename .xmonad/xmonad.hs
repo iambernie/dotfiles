@@ -82,7 +82,7 @@ myStartupHook = do spawn xmobarBottom
 
 bin_xmobar = "/run/current-system/sw/bin/xmobar"
 rc_xmobarTop = "/home/bernie/.xmobarrc.hs"
-rc_xmobarBottom = "/home/bernie/xmobarrc_bottom.hs"
+rc_xmobarBottom = "/home/bernie/.xmobarrc_bottom.hs"
 
 xmobarTop = bin_xmobar ++ " " ++ rc_xmobarTop
 xmobarBottom = bin_xmobar ++ " " ++ rc_xmobarBottom
