@@ -5,6 +5,7 @@ import XMonad.Core
        , spawn
        , ManageHook
        , layoutHook
+       , startupHook
        , manageHook
        , logHook
        , modMask
