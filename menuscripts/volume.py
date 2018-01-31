@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import subprocess
 
 output = (subprocess.check_output(["amixer", "get", "Master"])).decode()
