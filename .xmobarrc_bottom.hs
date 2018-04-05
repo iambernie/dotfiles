@@ -10,9 +10,9 @@ Config { font = "xft:Inconsolata:pixelsize=14:antialias=true"
        , overrideRedirect = False
        , commands = [ Run MarqueePipeReader "No IRQ activity:/home/bernie/pipes/mpipereader" (40, 5, "+") "mpipe"
                     , Run PipeReader "pipereader:/home/bernie/pipes/pipereader" "pipe"
-                    , Run Com "/home/bernie/wireless.sh" [] "wifi" 20
-                    , Run Com "/home/bernie/volume.py" [] "volume" 10
-                    , Run Com "/home/bernie/battery.sh" [] "bat" 20
+                    , Run Com "/home/bernie/menuscripts/wireless.sh" [] "wifi" 20
+                    , Run Com "/home/bernie/menuscripts/volume.py" [] "volume" 10
+                    , Run Com "/home/bernie/menuscripts/battery.sh" [] "bat" 20
 
                     ]
        , sepChar = "%"
