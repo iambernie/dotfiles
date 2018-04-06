@@ -1,0 +1,3 @@
+keyseq: "\ESC[7~" home
+keyseq: "\ESC[8~" end
+keyseq: "\ESC[3~" delete
