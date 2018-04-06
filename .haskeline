@@ -1,3 +1,4 @@
-keyseq: "\ESC[7~" home
-keyseq: "\ESC[8~" end
-keyseq: "\ESC[3~" delete
+keyseq: rxvt-unicode-256color "\ESC[7~" home
+keyseq: rxvt-unicode-256color "\ESC[8~" end
+keyseq: rxvt-unicode-256color "\ESC[3~" delete
+keyseq: rxvt-unicode-256color "\DEL" backspace
