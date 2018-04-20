@@ -1,0 +1,17 @@
+:set +t
+:set +s
+:set -XFlexibleContexts
+:set -XTypeFamilies
+:set -XOverloadedStrings
+:def hoogle \x -> return $ ":!hoogle " ++ x
+
+import Control.Applicative as CA
+import Control.Monad as CM
+-- import Data.Char
+import Data.List as L
+import System.Environment
+import Text.Pretty.Simple (pPrint)
+
+-- :set prompt "\ESC[34m%s> \ESC[m"
+
+:set prompt "\ESC[34mghci> \ESC[m"
