@@ -69,6 +69,7 @@ export GTK_IM_MODULE="ibus"
 export XMODIFIERS="@im=ibus"
 export QT_IM_MODULE="ibus"
 export EDITOR=vim
+export PYTHONSTARTUP=$HOME/.pythonstartup
 
 #Colored tab-completion list
 zstyle ':completion:*' list-colors "$LS_COLORS"
