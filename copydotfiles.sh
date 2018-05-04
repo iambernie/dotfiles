@@ -1,7 +1,6 @@
+#!/usr/bin/env bash
 
-# One for nixos
-# no .vim .vimrc
-# no .pyenvs
-# generate xmobarrc.hs based on available network interface
-#
-# One for arch
+cp -vr .config .ghci .gitconfig .haskeline .irssi .ncmpcpp .pythonstartup \
+.tigrc .xbindkeysrc .xmonad .xprofile .xmobarrc.hs \
+.xmobarrc_bottom.hs .Xresources .zshrc $HOME
+
