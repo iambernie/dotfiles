@@ -113,6 +113,7 @@ alias sa='echo "$SSH_AUTH_SOCK"'
 alias startx='ssh-agent startx'
 
 alias shoogle='hoogle search --count=20'
+alias nixconfman='man configuration.nix'
 
 #==============================  Key Bindings =================================#
 bindkey "\e[1~" beginning-of-line # Home
@@ -170,3 +171,5 @@ function reload { source $HOME/.zshrc; echo 'Loaded: ~/.zshrc ' }
 if [ -x "$(command -v direnv)" ]; then
   eval "$(direnv hook zsh)"
 fi
+
+umask 077
